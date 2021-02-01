@@ -324,15 +324,33 @@ var app = new Vue({
 
         // add element chat
         addElementChat(){
+
+            if(this.textInputChatMessage != ''){
+                
+                const message = {
+                    date: '10/01/2020 15:30:55',
+                    message: this.textInputChatMessage,
+                    status: 'received'
+                }
+
+                this.contatti[this.chatIndex].messages.push(message)
+                this.textInputChatMessage =''
+
+                setTimeout(this.addAnswer, 1000)
+
+            }
+        },
+
+        // risposta simulata
+         // add element chat
+        addAnswer(){
             const message = {
                 date: '10/01/2020 15:30:55',
-                message: this.textInputChatMessage,
-                status: 'received'
+                message: 'ok',
+                status: 'sent'
             }
 
             this.contatti[this.chatIndex].messages.push(message)
-
-            this.textInputChatMessage =''
         }
     }
 });
