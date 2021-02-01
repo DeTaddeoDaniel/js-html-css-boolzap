@@ -1,6 +1,8 @@
 var app = new Vue({
     el: '#apps',
     data:{
+
+        // contatti e chat
         contatti: [
             {
                 name: 'Michele',
@@ -44,7 +46,7 @@ var app = new Vue({
                     {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
+                    status: 'sent'
                     }
                 ],
             },
@@ -139,19 +141,54 @@ var app = new Vue({
 
         ],
 
+        // chat attiva
         chatAttiva: undefined,
-        chatIndex: 0
+        chatIndex: 0,
+
+        // search
+        search: ''
     },
+
+    // attiva la chat al posto 0 del primo contatto
     beforeMount() {
         this.chatAttiva = this.contatti[0].messages;
-        console.log(this.chatAttiva)
     },
+
     methods:{
         changeChat: function (index) {
             console.log(index);
             this.chatIndex = index;
             this.chatAttiva = this.contatti[index].messages;
-        }
+            console.log(this.chatAttiva)
+        },
+
+        // filtra contatti
+        filter: function () {
+
+            if(this.search != ''){
+
+                // filtro è attivo
+                this.contatti.forEach(contatto => {
+
+                    // tutto in minuscolo testo
+                    let nome = contatto.name.toLowerCase()
+                    let searchText = this.search.toLowerCase()
+
+                    // nome contiene stringa search
+                    if(nome.includes(searchText)){
+                        contatto.visible = true;
+                    } else {
+                        contatto.visible = false;
+                    }
+                });
+
+            } else {
+                this.contatti.forEach(contatto => {
+                    contatto.visible = true;
+                });
+            }
+
+        },
     }
 });
 

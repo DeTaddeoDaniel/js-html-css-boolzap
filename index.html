@@ -77,14 +77,19 @@
                 <div class="search">
                     <div class="search-content">
                         <i class="fas fa-search">
-                            <input type="text" placeholder="cerca o inizia una nuova conversazione">
+                            <input type="text" placeholder="cerca o inizia una nuova conversazione" v-model='search' @input='filter'>
                         </i>
                     </div>
                 </div>
 
                 <!-- contatti -->
                 <div class="contatti">
-                    <div class="contatto" v-for='(contatto,index) in contatti' @click='changeChat(index)'>
+                    <div 
+                    class="contatto" 
+                    v-for='(contatto,index) in contatti' 
+                    @click='changeChat(index)'
+                    v-if='contatto.visible'>
+                        
                         <!-- profilo -->
                         <div class="imgContatto">
                             <img :src="'img/avatar'+contatto.avatar+'.jpg'" alt="profilo">
