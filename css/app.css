@@ -8,7 +8,6 @@
 
 .left{
     width: 300px;
-    background-color: red;
 }
 
 .right{
@@ -30,7 +29,6 @@
 }
 
 .profilo{
-    background-color: orchid;
     color: black;
     height: 100%;
     display: flex;
@@ -42,11 +40,6 @@
     text-transform: uppercase;
     font-weight: bold;
     margin: 0 5px;
-}
-
-.profiloAction{
-    background-color: brown;
-    
 }
 
 .ImgConteiner{
@@ -95,12 +88,13 @@ img{
 }
 
 .testoNotifiche .activeNotifiche{
-    color: rgb(107, 105, 105);
+    color: rgb(189, 189, 189);
     text-decoration:underline;
 }
 
 .search{
     padding: 5px;
+    background-color: #525252;
 }
 
 .search-content{
@@ -128,7 +122,6 @@ img{
 }
 
 .contatti{
-    background-color: purple;
     overflow-y: scroll;
     height: 100%;
     height: calc(100vh - 150px);
@@ -138,7 +131,10 @@ img{
     padding: 10px;
     display: flex;
     align-items: center;
-    background-color: rgb(107, 105, 105);
+}
+
+.contatto:hover{
+    background-color: #646464;
 }
 
 .contatto .imgContatto{
@@ -163,7 +159,6 @@ img{
 
 .inputWrite .iconInput{
     width: auto;
-    background-color: red;
     font-size: 20px;
 }
 
