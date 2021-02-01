@@ -275,7 +275,10 @@ var app = new Vue({
         chatIndex: 0,
 
         // search
-        search: ''
+        search: '',
+
+        // input text
+        textInputChatMessage: ''
     },
 
     // attiva la chat al posto 0 del primo contatto
@@ -318,6 +321,19 @@ var app = new Vue({
             }
 
         },
+
+        // add element chat
+        addElementChat(){
+            const message = {
+                date: '10/01/2020 15:30:55',
+                message: this.textInputChatMessage,
+                status: 'received'
+            }
+
+            this.contatti[this.chatIndex].messages.push(message)
+
+            this.textInputChatMessage =''
+        }
     }
 });
 
