@@ -137,12 +137,20 @@ var app = new Vue({
                 ],
             },           
 
-        ]
+        ],
+
+        chatAttiva: undefined,
+        chatIndex: 0
     },
-    computed:{
-        SrcImageContatti: function (index) {
-            console.log
-            return 'img/avatar'+this.contatti[index].avatar;
+    beforeMount() {
+        this.chatAttiva = this.contatti[0].messages;
+        console.log(this.chatAttiva)
+    },
+    methods:{
+        changeChat: function (index) {
+            console.log(index);
+            this.chatIndex = index;
+            this.chatAttiva = this.contatti[index].messages;
         }
     }
 });

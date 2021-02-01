@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/contattiStyle.css">
     <link rel="stylesheet" href="css/searchFriend.css">
     <link rel="stylesheet" href="css/notificheStyle.css">
+
 </head>
 <body>
     <div class="wrap">
@@ -83,7 +84,7 @@
 
                 <!-- contatti -->
                 <div class="contatti">
-                    <div class="contatto" v-for='(contatto,index) in contatti'>
+                    <div class="contatto" v-for='(contatto,index) in contatti' @click='changeChat(index)'>
                         <!-- profilo -->
                         <div class="imgContatto">
                             <img :src="'img/avatar'+contatto.avatar+'.jpg'" alt="profilo">
@@ -106,7 +107,7 @@
 
                     <div 
                         class="divMessage" 
-                        v-for="messaggio in contatti[0].messages"
+                        v-for="messaggio in chatAttiva"
                         :class="(messaggio.status == 'received') ? 'rightMove' : 'leftMove'">
                         <span>
                             <span 
