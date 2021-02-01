@@ -37,3 +37,44 @@
     display: inline-block;
     text-align: center;
 }
+
+.messageAll{
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 12px;
+
+    height: 100%;
+}
+
+.divMessage{
+    text-align: left;
+}
+
+.divMessage>span{
+}
+
+.message{
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: red;
+}
+
+.received{
+    background-color: green;
+}
+
+.sent{
+    background-color: white;
+}
+
+.leftMove{
+    text-align: left;
+}
+
+.rightMove{
+    text-align: right;
+}

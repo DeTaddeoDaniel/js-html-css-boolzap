@@ -92,6 +92,25 @@
             <div class="right">
                 <div class="header paddingDiv">
                 </div>
+                <div class="messageAll">
+
+                    <!-- :class="(messaggio.status == 'received') ? 'message received' : 'message sent'">                         -->
+                    <!-- v-for="messaggio in contatti[2].messages" -->
+                    <div 
+                        class="divMessage" 
+                        v-for="messaggio in contatti[0].messages"
+                        :class="(messaggio.status == 'received') ? 'leftMove' : 'rightMove'">
+                        <span>
+                            <span 
+                                class="message"
+                                :class="(messaggio.status == 'received') ? 'message received' : 'message sent'"
+                            >
+                                {{messaggio.message}}
+                            </span>
+                        </span>
+                    </div>
+
+                </div>
             </div>
 
         </div>

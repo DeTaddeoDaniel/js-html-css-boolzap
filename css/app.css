@@ -13,7 +13,7 @@
 
 .right{
     width: calc(100% - 300px);
-    background-color: green;
+    background-color: rgb(146, 151, 146);
 }
 
 .header{
