@@ -99,3 +99,30 @@ img{
     text-decoration:underline;
 }
 
+.search{
+    padding: 5px;
+}
+
+.search-content{
+    width: 100%;
+    border-radius: 20px;
+    background-color: white;
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+.search i{
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+}
+
+.search input{
+    font-size: 16px;
+    width: calc(100% - 30px);
+    border: 0;
+}
+
+.search input:focus{
+    outline: none;
+}
