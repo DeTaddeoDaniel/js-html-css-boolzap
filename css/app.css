@@ -5,12 +5,12 @@
 }
 
 .left{
-    width: 200px;
+    width: 300px;
     background-color: red;
 }
 
 .right{
-    width: calc(100% - 200px);
+    width: calc(100% - 300px);
     background-color: green;
 }
 
@@ -19,9 +19,34 @@
     border: .5px solid rgb(74, 74, 74);
     color: rgb(145, 145, 145);
     height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.paddingDiv{
-    padding: 5px 8px;
+.profilo{
+    background-color: orchid;
+    color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.nameUser{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.ImgConteiner{
+    height: 100%;
+    padding: 5px;
+}
+
+img{
+    height:100%;
+    border-radius: 100%;
 }
 
