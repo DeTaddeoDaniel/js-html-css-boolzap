@@ -1,0 +1,37 @@
+
+.messageAll{
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 12px;
+    flex-grow: 1;
+    /* height: 100%; */
+}
+
+.divMessage{
+    text-align: left;
+}
+
+.message{
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.received{
+    background-color: green;
+}
+
+.sent{
+    background-color: white;
+}
+
+.leftMove{
+    text-align: left;
+}
+
+.rightMove{
+    text-align: right;
+}
