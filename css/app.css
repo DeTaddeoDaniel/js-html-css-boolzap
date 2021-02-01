@@ -1,0 +1,27 @@
+.app{
+    display: flex;
+    height: 100%;
+    flex-basis: 200px;
+}
+
+.left{
+    width: 200px;
+    background-color: red;
+}
+
+.right{
+    width: calc(100% - 200px);
+    background-color: green;
+}
+
+.header{
+    background-color: rgb(237, 237, 237);
+    border: .5px solid rgb(74, 74, 74);
+    color: rgb(145, 145, 145);
+    height: 50px;
+}
+
+.paddingDiv{
+    padding: 5px 8px;
+}
+

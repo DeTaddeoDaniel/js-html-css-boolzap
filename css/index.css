@@ -12,6 +12,7 @@
 .wrap{
     height: 100vh;
     background-color: peru;
+    position: relative;
 }
 
 .lineGreenBackground{
@@ -24,3 +25,16 @@
     background-color: var(--gray-deep);
 }
 
+.app{
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    
+    width: 100vw;
+    height: 100vh;
+
+    background-color: peru;
+    display: inline-block;
+    text-align: center;
+}
