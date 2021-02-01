@@ -90,14 +90,18 @@
 
             <!-- right -->
             <div class="right">
+                
+                <!-- header sx -->
                 <div class="header paddingDiv">
                 </div>
+
+                <!-- message all -->
                 <div class="messageAll">
 
                     <div 
                         class="divMessage" 
                         v-for="messaggio in contatti[0].messages"
-                        :class="(messaggio.status == 'received') ? 'leftMove' : 'rightMove'">
+                        :class="(messaggio.status == 'received') ? 'rightMove' : 'leftMove'">
                         <span>
                             <span 
                                 class="message"
@@ -108,6 +112,19 @@
                         </span>
                     </div>
 
+                </div>
+
+                <!-- write message  -->
+                <div class="inputWrite">
+                    <div class="iconInput">
+                        <i class="fas fa-chalkboard"></i>
+                    </div>
+                    <div class="inputText">
+                        <input type="text">
+                    </div>
+                    <div class="iconInput">
+                        <i class="fas fa-chalkboard"></i>
+                    </div>
                 </div>
             </div>
 
