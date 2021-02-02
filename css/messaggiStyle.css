@@ -4,22 +4,23 @@
     padding-right: 30px;
     border-radius: 10px;
     font-size: 15px;
-    flex-grow: 1;
+    
+    
     overflow: auto;
-    /* height: 100%; */
+    height: calc( 100vh - 50px - 50px);
+    
 }
 
 .divMessage{
-    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
-
 
 .message{
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 10px;
-    display: inline-block;
-    word-break: break-all;
+    word-break: break-word;
     max-width: 60%;
 }
 
@@ -36,9 +37,9 @@
 }
 
 .leftMove{
-    text-align: left;
+    align-items: flex-start;
 }
 
 .rightMove{
-    text-align: right;
+    align-items: flex-end;
 }
