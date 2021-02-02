@@ -37,7 +37,7 @@
 }
 
 .nameUser{
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bold;
     margin: 0 5px;
 }

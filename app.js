@@ -270,6 +270,12 @@ var app = new Vue({
 
         ],
 
+        // user
+        user:{
+            imgLink: '_io',
+            name: 'Lucia'
+        },
+
         // chat attiva
         chatAttiva: undefined,
         chatIndex: 0,

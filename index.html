@@ -37,9 +37,9 @@
                     <!-- profilo -->
                     <div class="profilo">
                         <div class="ImgConteiner">
-                            <img src="img/avatar_io.jpg" alt="profilo">
+                            <img :src="'img/avatar'+user.imgLink+'.jpg'" alt="profiloUser">
                         </div>
-                        <p class="nameUser">nome utente</p>
+                        <p class="nameUser">{{user.name}}</p>
                     </div>
                     
                     <!-- action profile -->
