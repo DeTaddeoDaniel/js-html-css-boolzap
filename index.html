@@ -10,6 +10,9 @@
 
     <!-- icon awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    
+    <!-- moment js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
 
     <!-- style -->
     <link rel="stylesheet" href="css/index.css">
@@ -141,6 +144,7 @@
                                 :class="(messaggio.status == 'received') ? 'message received' : 'message sent'"
                             >
                                 {{messaggio.message}}
+                                <!-- <p>{{messaggio.date}}</p> -->
                             </span>
                         </span>
                     </div>

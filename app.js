@@ -334,7 +334,7 @@ var app = new Vue({
             if(this.textInputChatMessage != ''){
                 
                 const message = {
-                    date: '10/01/2020 15:30:55',
+                    date: Date.now(),
                     message: this.textInputChatMessage,
                     status: 'received'
                 }
@@ -342,7 +342,7 @@ var app = new Vue({
                 this.contatti[this.chatIndex].messages.push(message)
                 this.textInputChatMessage =''
 
-                setTimeout(this.addAnswer, 1000)
+                setTimeout(this.addAnswer, 3000)
 
             }
         },
@@ -351,7 +351,7 @@ var app = new Vue({
          // add element chat
         addAnswer(){
             const message = {
-                date: '10/01/2020 15:30:55',
+                date: Date.now(),
                 message: 'ok',
                 status: 'sent'
             }

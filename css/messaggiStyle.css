@@ -19,6 +19,8 @@
     border-radius: 10px;
     margin-bottom: 10px;
     display: inline-block;
+    word-break: break-all;
+    max-width: 60%;
 }
 
 .message:first-child{
