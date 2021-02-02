@@ -22,7 +22,7 @@
     border-radius: 10px;
     margin-bottom: 10px;
     word-break: break-word;
-    min-width: 10%;
+    min-width: 15%;
     max-width: 60%;
     display: block;
     position: relative;
@@ -62,4 +62,33 @@
 
 .received .infoOrario{
     color: rgb(184, 182, 182);
+}
+
+.menuTendina{
+    text-align: left;
+    position: absolute;
+    transform: translateY(70%);
+    z-index: 1;
+    display: none;
+}
+
+.menuTendina ul{
+    text-align: left;
+    border: 1px solid darkgray;
+}
+
+.menuTendina ul li{
+    padding: 10px;
+    text-align: left;
+    background-color: lightgray;
+}
+
+.menuTendina ul li:hover{
+    padding: 10px;
+    text-align: left;
+    background-color: gray;
+}
+
+.show{
+    display: block;
 }

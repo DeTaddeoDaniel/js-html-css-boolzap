@@ -106,6 +106,7 @@
 
             <!-- right -->
             <div class="right">
+
                 
                 <!-- header sx -->
                 <div class="header paddingDiv">
@@ -136,7 +137,8 @@
 
                     <div 
                         class="divMessage" 
-                        v-for="messaggio in chatAttiva"
+                        @click='clickMessage(index)'
+                        v-for="(messaggio,index) in chatAttiva"
                         :class="(messaggio.status == 'received') ? 'rightMove' : 'leftMove'">
                        
                             <p 
@@ -147,6 +149,13 @@
                                 <span class="infoOrario">{{moment(messaggio.date)}}</span>
 
                             </p>
+
+                            <div class="menuTendina">
+                                <ul>
+                                    <li @click='infoMessage(index)'>Messaggio info</li>
+                                    <li @click='deleteMessage(index)'>Cancella messaggio</li>
+                                </ul>
+                            </div>
                             
 
                     </div>

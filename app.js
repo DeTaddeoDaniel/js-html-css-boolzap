@@ -10,17 +10,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '10/01/2020 23:50:33',
                         message: 'Hai portato a spasso il cane?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '11/01/2020 7:50:00',
                         message: 'Ricordati di dargli da mangiare',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 16:15:22',
+                        date: '11/01/2020 8:15:22',
                         message: 'Tutto fatto!',
                         status: 'received'
                     }
@@ -296,9 +296,9 @@ var app = new Vue({
         // trasforma data con moment.js
         this.contatti.forEach( contatto =>{
             contatto.messages.forEach( messaggio =>{
-                console.log(messaggio.date)
+                // console.log(messaggio.date)
                 messaggio.date = moment( messaggio.date,"DD/MM/YYYY hh:mm:ss");
-                console.log(messaggio.date)
+                // console.log(messaggio.date)
             } );
         });
     },
@@ -345,7 +345,7 @@ var app = new Vue({
             if(this.textInputChatMessage != ''){
                 
                 const message = {
-                    date: moment().format("[Inviato alle ] HH:MM:ss"),
+                    date: moment(),
                     message: this.textInputChatMessage,
                     status: 'received'
                 }
@@ -361,7 +361,7 @@ var app = new Vue({
         // risposta simulata
         addAnswer(){
             const message = {
-                date: moment().format("[Ricevuto alle ] HH:MM:ss"),
+                date: moment(),
                 message: 'ok',
                 status: 'sent'
             }
@@ -369,14 +369,38 @@ var app = new Vue({
             this.contatti[this.chatIndex].messages.push(message)
         },
 
+        // richiamo la funzione moment
         moment: function (stringa) {
-            console.log(stringa);
-            let check = moment(stringa).format('H:m:ss [il] D/MM');
-            console.log(check);
+            // console.log(stringa);
+            let check = moment(stringa).format('H:mm:ss [il] D/MM');
+            // console.log(check);
             return check;
+        },
+
+        // click message
+        clickMessage: function(index){
+            console.log('click message: '+index);
+            let message = document.querySelectorAll('.messageAll .divMessage')[index]
+            let menuTendina = message.querySelector('.menuTendina')
+
+            menuTendina.classList.add('show');
+        },
+
+        // info message
+        infoMessage: function(index){
+            console.log('info message: '+index);
+            
+            let message = document.getElementsByClassName('divMessage')[index]
+            let menuTendina = message.getElementsByClassName('menuTendina')[0]
+            
+            menuTendina.classList.remove('show');
+            console.log(menuTendina.classList)
+        },
+
+        // cancella messaggio
+        deleteMessage: function(index){
+            console.log('cancella messaggio: '+index)
         }
+
     }
 });
-
-console.log(moment().format());
-console.log(moment().format('HH MM SS')); 
