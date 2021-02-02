@@ -371,7 +371,7 @@ var app = new Vue({
 
         moment: function (stringa) {
             console.log(stringa);
-            let check = moment(stringa).format('H:m:ss');
+            let check = moment(stringa).format('H:m:ss [il] D/MM');
             console.log(check);
             return check;
         }
