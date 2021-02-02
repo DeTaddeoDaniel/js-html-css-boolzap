@@ -17,11 +17,15 @@
 }
 
 .message{
-    padding: 15px;
+    padding: 10px;
+    padding-bottom: 20px;
     border-radius: 10px;
     margin-bottom: 10px;
     word-break: break-word;
     max-width: 60%;
+    display: block;
+    position: relative;
+    text-align: left;
 }
 
 .message:first-child{
@@ -29,7 +33,8 @@
 }
 
 .received{
-    background-color: green;
+    color: white;
+    background-color: rgb(11, 146, 11);
 }
 
 .sent{
@@ -42,4 +47,18 @@
 
 .rightMove{
     align-items: flex-end;
+}
+
+.infoOrario{
+    color: darkgray;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-20%);
+    font-size: 10px;
+
+}
+
+.received .infoOrario{
+    color: rgb(184, 182, 182);
 }

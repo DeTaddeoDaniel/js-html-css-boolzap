@@ -289,7 +289,18 @@ var app = new Vue({
 
     // attiva la chat al posto 0 del primo contatto
     beforeMount() {
+
+        // attiva chat per difetto
         this.chatAttiva = this.contatti[0].messages;
+        
+        // trasforma data con moment.js
+        this.contatti.forEach( contatto =>{
+            contatto.messages.forEach( messaggio =>{
+                console.log(messaggio.date)
+                messaggio.date = moment( messaggio.date,"DD/MM/YYYY hh:mm:ss");
+                console.log(messaggio.date)
+            } );
+        });
     },
 
     methods:{
@@ -334,7 +345,7 @@ var app = new Vue({
             if(this.textInputChatMessage != ''){
                 
                 const message = {
-                    date: Date.now(),
+                    date: moment().format("[Inviato alle ] HH:MM:ss"),
                     message: this.textInputChatMessage,
                     status: 'received'
                 }
@@ -348,17 +359,24 @@ var app = new Vue({
         },
 
         // risposta simulata
-         // add element chat
         addAnswer(){
             const message = {
-                date: Date.now(),
+                date: moment().format("[Ricevuto alle ] HH:MM:ss"),
                 message: 'ok',
                 status: 'sent'
             }
 
             this.contatti[this.chatIndex].messages.push(message)
+        },
+
+        moment: function (stringa) {
+            console.log(stringa);
+            let check = moment(stringa).format('H:m:ss');
+            console.log(check);
+            return check;
         }
     }
 });
 
-console.log('test');
+console.log(moment().format());
+console.log(moment().format('HH MM SS')); 
