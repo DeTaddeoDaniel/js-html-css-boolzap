@@ -390,11 +390,12 @@ var app = new Vue({
         infoMessage: function(index){
             console.log('info message: '+index);
             
-            let message = document.getElementsByClassName('divMessage')[index]
-            let menuTendina = message.getElementsByClassName('menuTendina')[0]
-            
-            menuTendina.classList.remove('show');
-            console.log(menuTendina.classList)
+
+            let message = document.getElementsByClassName('divMessage')[index].children[1];
+            console.log(message)
+            message.classList.remove('show');
+
+            console.log(message.classList)
         },
 
         // cancella messaggio
