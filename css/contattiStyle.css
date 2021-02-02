@@ -1,3 +1,9 @@
+.contatti{
+    overflow-y: scroll;
+    height: 100%;
+    height: calc(100vh - 150px);
+}
+
 .contatto{
     padding: 10px;
     display: flex;
