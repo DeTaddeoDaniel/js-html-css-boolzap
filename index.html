@@ -137,11 +137,11 @@
 
                     <div 
                         class="divMessage" 
-                        @click='clickMessage(index)'
                         v-for="(messaggio,index) in chatAttiva"
                         :class="(messaggio.status == 'received') ? 'rightMove' : 'leftMove'">
                        
                             <p 
+                                @click='clickMessage(index)'
                                 :class="(messaggio.status == 'received') ? 'message received' : 'message sent'"
                             >
                                 {{messaggio.message}}

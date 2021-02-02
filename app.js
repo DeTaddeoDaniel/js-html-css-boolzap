@@ -379,28 +379,33 @@ var app = new Vue({
 
         // click message
         clickMessage: function(index){
-            console.log('click message: '+index);
             let message = document.querySelectorAll('.messageAll .divMessage')[index]
-            let menuTendina = message.querySelector('.menuTendina')
+            // console.log(message);
+            let menuTendina = message.children[1]
 
+            // console.log(menuTendina.classList);
             menuTendina.classList.add('show');
+            // console.log(menuTendina.classList);
         },
 
         // info message
         infoMessage: function(index){
-            console.log('info message: '+index);
-            
+            console.log('info message: '+ index);
+            let message = document.querySelectorAll('.messageAll .divMessage')[index];
+            let menuTendina = message.children[1];
 
-            let message = document.getElementsByClassName('divMessage')[index].children[1];
-            console.log(message)
-            message.classList.remove('show');
-
-            console.log(message.classList)
+            menuTendina.classList.remove('show');
+        
         },
 
         // cancella messaggio
         deleteMessage: function(index){
-            console.log('cancella messaggio: '+index)
+            let message = document.querySelectorAll('.messageAll .divMessage')[index];
+            let menuTendina = message.children[1];
+
+            this.contatti[this.chatIndex].messages.splice(index, 1);
+
+            menuTendina.classList.remove('show');
         }
 
     }
