@@ -27,8 +27,12 @@
 
 </head>
 <body>
+
+
     <div class="wrap">
         <div class="app" id="apps">
+
+            <audio id="linkAudio" src="sound/audio esempio.mp3"></audio>
             
             <!-- left -->
             <div class="left">
@@ -169,7 +173,7 @@
                         <input type="text"  v-model="textInputChatMessage" @keyup.enter='addElementChat' placeholder="Inserisci testo da inviare">
                     </div>
                     <div class="iconInput">
-                        <i class="fas fa-microphone"></i>
+                        <i class="fas fa-microphone" @click="playAudio"></i>
                     </div>
                 </div>
             </div>

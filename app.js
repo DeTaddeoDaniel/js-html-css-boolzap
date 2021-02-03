@@ -273,7 +273,8 @@ var app = new Vue({
         // user
         user:{
             imgLink: '_io',
-            name: 'Lucia'
+            name: 'Lucia',
+            info: 'Testo del info utente che ha scritto'
         },
 
         // chat attiva
@@ -406,6 +407,13 @@ var app = new Vue({
             this.contatti[this.chatIndex].messages.splice(index, 1);
 
             menuTendina.classList.remove('show');
+        },
+
+        playAudio: function(){
+            let audio = document.getElementById("linkAudio");
+            console.log(audio)
+            audio.play();
+            
         }
 
     }
