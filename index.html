@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/searchFriend.css">
     <link rel="stylesheet" href="css/notificheStyle.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/finestraProfilo.css">
 
 </head>
 <body>
@@ -51,7 +52,7 @@
                     <!-- action profile -->
                     <div class="profiloAction">
                         <div class="action stato">
-                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-circle-notch" @click="openProfilo"></i>
                         </div>        
                         <div class="action NewChat">
                             <i class="fas fa-comment-alt"></i>
@@ -101,6 +102,36 @@
                             <img :src="'img/avatar'+contatto.avatar+'.jpg'" alt="profilo">
                         </div>
                         <p class="nameUser">{{contatto.name}}</p>
+                    </div>
+                </div>
+
+                <!-- finestra profilo -->
+                <div class="profiloFinestra" v-if="openProfiloBooleano">
+                    <div class="profiloHeader">
+                        <span class="closeProfiloFinestra" @click="closeProfiloFinestra">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span>Profilo</span>
+                    </div>
+                    <div class="mainProfilo">
+                        <div class="imgConteiner">
+                            <img :src="'img/avatar'+user.imgLink+'.jpg'" alt="">
+                        </div>
+                        
+                        <div class="section">
+                            <p>Il tuo nome</p>
+                            <input v-model="user.name" type="text">
+                            <span></span>
+                        </div>
+                        
+                        <p class="testoAvviso">Questo è il nome utente e sara visibile ai tuoi contatti</p>
+                        
+                        <div class="section">
+                            <p>Info</p>
+                            <textarea v-model="user.info" type="textArea"></textarea>
+                            <span></span>
+                        </div>
+
                     </div>
                 </div>
 
@@ -176,6 +207,7 @@
                         <i class="fas fa-microphone" @click="playAudio"></i>
                     </div>
                 </div>
+
             </div>
 
         </div>

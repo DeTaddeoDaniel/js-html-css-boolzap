@@ -274,7 +274,7 @@ var app = new Vue({
         user:{
             imgLink: '_io',
             name: 'Lucia',
-            info: 'Testo del info utente che ha scritto'
+            info: 'Testo del info utente che ha scritto su ste stesso'
         },
 
         // chat attiva
@@ -285,7 +285,10 @@ var app = new Vue({
         search: '',
 
         // input text
-        textInputChatMessage: ''
+        textInputChatMessage: '',
+
+        // schermate
+        openProfiloBooleano: false,
     },
 
     // attiva la chat al posto 0 del primo contatto
@@ -412,9 +415,17 @@ var app = new Vue({
         playAudio: function(){
             let audio = document.getElementById("linkAudio");
             console.log(audio)
-            audio.play();
-            
+            audio.play();   
+        },
+
+        openProfilo: function(){
+            this.openProfiloBooleano = true ;
+        },
+
+        closeProfiloFinestra: function(){
+            this.openProfiloBooleano = false ;
         }
+
 
     }
 });

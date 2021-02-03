@@ -1,0 +1,113 @@
+.profiloFinestra{
+    width: 300px;
+    height: 100%;
+    overflow: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profiloFinestra .profiloHeader{
+    height: 140px;
+    background-color: rgb(46, 124, 46);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-left: 10px;
+    
+}
+
+.profiloFinestra .profiloHeader span{
+    padding-bottom: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+.profiloFinestra .profiloHeader .imgConteiner {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.profiloFinestra .mainProfilo{
+    background-color: #ccc;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.profiloFinestra .mainProfilo .imgConteiner{
+    padding: 20px 20px;
+}
+
+.profiloFinestra .mainProfilo .imgConteiner img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.section{
+    background-color: white;
+    color: green;
+    padding: 20px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    overflow-y: auto;
+}
+
+.section p{
+    background-color: white;
+    color: green;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.section input{
+    width: 100%;
+    padding: 10px 20px;
+    border: 0;
+    font-size: 22px;
+}
+
+.section textarea{
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    border: 0;
+    font-size: 22px;
+    outline: none;
+    overflow: overlay;
+    height: 150px;
+}
+
+.testoAvviso{
+    padding: 10px 20px;
+}
+
+
+
+/* <div class="profiloFinestra">
+                    <div class="profiloHeader"></div>
+                    <div class="mainProfilo">
+                        <div class="image">
+                            <img :src="'img/avatar'+user.imgLink+'.jpg'" alt="">
+                        </div>
+                        
+                        <div class="section">
+                            <p>Il tuo nome</p>
+                            <input v-model="user.name" type="text">
+                            <span></span>
+                        </div>
+                        
+                        <p>Questo è il nome utente e sara visibile ai tuoi contatti</p>
+                        
+                        <div class="section">
+                            <p>Info</p>
+                            <input v-model="user.info" type="text">
+                            <span></span>
+                        </div>
+
+                    </div>
+                </div> */
