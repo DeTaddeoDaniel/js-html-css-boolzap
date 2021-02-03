@@ -1,0 +1,94 @@
+
+.messageAll{
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    
+    
+    overflow: auto;
+    height: calc( 100vh - 50px - 50px);
+    
+}
+
+.divMessage{
+    display: flex;
+    flex-direction: column;
+}
+
+.message{
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    word-break: break-word;
+    min-width: 15%;
+    max-width: 60%;
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+.message:first-child{
+    margin-top: 10px;
+}
+
+.received{
+    color: white;
+    background-color: rgb(11, 146, 11);
+}
+
+.sent{
+    background-color: white;
+}
+
+.leftMove{
+    align-items: flex-start;
+}
+
+.rightMove{
+    align-items: flex-end;
+}
+
+.infoOrario{
+    color: darkgray;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-20%);
+    font-size: 10px;
+
+}
+
+.received .infoOrario{
+    color: rgb(184, 182, 182);
+}
+
+.menuTendina{
+    text-align: left;
+    position: absolute;
+    transform: translateY(70%);
+    z-index: 1;
+    display: none;
+}
+
+.menuTendina ul{
+    text-align: left;
+    border: 1px solid darkgray;
+}
+
+.menuTendina ul li{
+    padding: 10px;
+    text-align: left;
+    background-color: lightgray;
+}
+
+.menuTendina ul li:hover{
+    padding: 10px;
+    text-align: left;
+    background-color: gray;
+}
+
+.show{
+    display: block;
+}
