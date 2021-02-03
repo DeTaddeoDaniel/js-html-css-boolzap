@@ -120,16 +120,18 @@
                         
                         <div class="section">
                             <p>Il tuo nome</p>
-                            <input v-model="user.name" type="text">
-                            <span></span>
+                            <input v-model="user.name" type="text" disabled id="inputUserInput"> 
+                            <span v-if="!editInput"><i @click="attivaInput('nomeUser')" class="fas fa-edit"></i></span>
+                            <span v-if="editInput"><i @click="disattivaInput('nomeUser')" class="fas fa-check"></i></span>
                         </div>
                         
                         <p class="testoAvviso">Questo è il nome utente e sara visibile ai tuoi contatti</p>
                         
                         <div class="section">
                             <p>Info</p>
-                            <textarea v-model="user.info" type="textArea"></textarea>
-                            <span></span>
+                            <textarea v-model="user.info" type="textArea" disabled id="inputInfoInput"></textarea>
+                            <span v-if="!editInput"><i @click="attivaInput('infoUser')" class="fas fa-edit"></i></span>
+                            <span v-if="editInput"><i @click="disattivaInput('infoUser')" class="fas fa-check"></i></span>
                         </div>
 
                     </div>

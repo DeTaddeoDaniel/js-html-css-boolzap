@@ -85,29 +85,3 @@
 .testoAvviso{
     padding: 10px 20px;
 }
-
-
-
-/* <div class="profiloFinestra">
-                    <div class="profiloHeader"></div>
-                    <div class="mainProfilo">
-                        <div class="image">
-                            <img :src="'img/avatar'+user.imgLink+'.jpg'" alt="">
-                        </div>
-                        
-                        <div class="section">
-                            <p>Il tuo nome</p>
-                            <input v-model="user.name" type="text">
-                            <span></span>
-                        </div>
-                        
-                        <p>Questo è il nome utente e sara visibile ai tuoi contatti</p>
-                        
-                        <div class="section">
-                            <p>Info</p>
-                            <input v-model="user.info" type="text">
-                            <span></span>
-                        </div>
-
-                    </div>
-                </div> */

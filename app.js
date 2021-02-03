@@ -289,6 +289,7 @@ var app = new Vue({
 
         // schermate
         openProfiloBooleano: false,
+        editInput: false,
     },
 
     // attiva la chat al posto 0 del primo contatto
@@ -424,6 +425,23 @@ var app = new Vue({
 
         closeProfiloFinestra: function(){
             this.openProfiloBooleano = false ;
+        },
+
+        attivaInput: function(message){
+            
+            this.editInput = true;
+
+            document.getElementById('inputUserInput').disabled = false;
+            document.getElementById('inputInfoInput').disabled = false;
+
+        },
+
+        disattivaInput: function(message){
+
+            this.editInput = false;
+
+            document.getElementById('inputUserInput').disabled = true;
+            document.getElementById('inputInfoInput').disabled = true;
         }
 
 
