@@ -4,10 +4,20 @@
 }
 
 .contatto{
-    padding: 5px 10pz;
+    padding: 10px 10px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     height: 60px;
+}
+
+.contatto .ImgConteiner{
+    padding:  0;
+}
+
+.contatto .nameUser{
+    margin: 0;
+    margin-left: 20px;
 }
 
 .contatto:hover{
@@ -15,12 +25,20 @@
 }
 
 .inputWrite{
-    background-color: lightseagreen;
+    background-color: #aaa;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.inputWrite input{
+    width: calc(100%);
+    border: 0;
+
 }
 
 .inputWrite .iconInput{
@@ -33,9 +51,11 @@
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    padding: 10px 25px;
+    padding: 5px 25px;
 }
 
 .inputWrite .inputText input{
-    width: 100%;
+    padding: 5px 10px;
+    font-size: 17px;
+    border-radius: 15px;
 }

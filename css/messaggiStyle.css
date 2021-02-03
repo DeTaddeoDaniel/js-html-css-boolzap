@@ -1,26 +1,39 @@
 
 .messageAll{
+    position: relative;
     padding-left: 30px;
     padding-right: 30px;
-    border-radius: 10px;
     font-size: 15px;
     
-    
+    background-color: rgba(125, 125, 125, 0.8);
+
     overflow: auto;
     height: calc( 100vh - 50px - 50px);
     
 }
 
+.messageAll::before {    
+    content: "";
+    background-image: url('../img/sfondo.png');
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0.20;
+
+    width: 100%;
+    height: 100%;
+}
+
 .divMessage{
     display: flex;
     flex-direction: column;
+    filter: opacity(100%);
 }
 
 .message{
-    padding: 10px;
-    padding-bottom: 20px;
+    padding: 10px 10px 10px 10px;
+    padding-bottom:20px;
     border-radius: 10px;
-    margin-bottom: 10px;
     word-break: break-word;
     min-width: 15%;
     max-width: 60%;
@@ -30,12 +43,11 @@
 }
 
 .message:first-child{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .received{
-    color: white;
-    background-color: rgb(11, 146, 11);
+    background-color: #7CDF64;
 }
 
 .sent{
@@ -51,7 +63,7 @@
 }
 
 .infoOrario{
-    color: darkgray;
+    color: rgb(110, 110, 110);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -61,7 +73,7 @@
 }
 
 .received .infoOrario{
-    color: rgb(184, 182, 182);
+    color: rgb(112, 111, 111);
 }
 
 .menuTendina{

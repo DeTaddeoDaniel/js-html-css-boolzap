@@ -28,8 +28,6 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="lineGreenBackground"></div>
-        <div class="lineGrayBackground"></div>
         <div class="app" id="apps">
             
             <!-- left -->
@@ -168,7 +166,7 @@
                         <i class="far fa-smile"></i>
                     </div>
                     <div class="inputText">
-                        <input type="text"  v-model="textInputChatMessage" @keyup.enter='addElementChat'>
+                        <input type="text"  v-model="textInputChatMessage" @keyup.enter='addElementChat' placeholder="Inserisci testo da inviare">
                     </div>
                     <div class="iconInput">
                         <i class="fas fa-microphone"></i>
