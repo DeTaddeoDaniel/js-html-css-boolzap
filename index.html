@@ -129,7 +129,8 @@
                         
                         <div class="section">
                             <p>Info</p>
-                            <textarea v-model="user.info" type="textArea" disabled id="inputInfoInput"></textarea>
+                            <!-- <textarea v-model="user.info" type="textArea" disabled id="inputInfoInput"></textarea> -->
+                            <Editable v-model="user.info" v-bind:state="editInput"></Editable>
                             <span v-if="!editInput"><i @click="attivaInput('infoUser')" class="fas fa-edit"></i></span>
                             <span v-if="editInput"><i @click="disattivaInput('infoUser')" class="fas fa-check"></i></span>
                         </div>

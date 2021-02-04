@@ -1,3 +1,30 @@
+Vue.component('editable',{
+  template: `
+        <div class="input" 
+        contenteditable="true" 
+        v-once 
+        v-html="value" 
+        :value="value" 
+        @input="$emit('input', $event.target.innerHTML)">
+    </div>`,
+  props: ['value'],
+      watch: {
+        value: function (newValue) {
+
+            // console.log(state.value)
+            if (document.activeElement == this.$el) {
+                return;
+            }
+
+            this.$el.innerHTML = newValue;
+        },
+
+        state: function () {
+            console.log(this.state)
+        },
+    }});
+
+
 var app = new Vue({
     el: '#apps',
     data:{
@@ -397,8 +424,6 @@ var app = new Vue({
 
         // richiamo la funzione moment
         moment: function (stringa) {
-            console.log(moment().date());
-            console.log(moment().date(String));
 
             let check = undefined;
 
@@ -520,6 +545,9 @@ var app = new Vue({
 
         },
 
+        // nueva chat
+        nuovaChat: function () {
 
+        }
     }
 });
