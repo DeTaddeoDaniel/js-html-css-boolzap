@@ -32,12 +32,12 @@ var app = new Vue({
                     {
                         date: '03/02/2020 15:05:33',
                         message: 'Domani faccio gli auguri',
-                        status: 'received'
+                        status: 'sent'
                     },
                     {
                         date: '04/02/2020 8:50:33',
                         message: 'Li ho dato un regalo e un biglietto di buon compleanno',
-                        status: 'received'
+                        status: 'sent'
                     },
                 ],
             },
@@ -402,15 +402,19 @@ var app = new Vue({
 
             let check = undefined;
 
+            // oggi
             if( moment().date() == moment(stringa).date() ){
                 check = moment(stringa).format('[oggi ]H:mm:ss');
             
+            // ieri
             } else if( moment().date() - 1 == moment(stringa).date() ){
                 check = moment(stringa).format('[ieri ]H:mm');
             
+            // l'altro ieri
             }  else if( moment().date() - 2 == moment(stringa).date() ){
                 check = moment(stringa).format('[l\'altroieri ]H:mm');
             
+            // passato
             } else {
                 check = moment(stringa).format('[data ]D/MM/YY');
             }
