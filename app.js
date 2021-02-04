@@ -23,7 +23,22 @@ var app = new Vue({
                         date: '11/01/2020 8:15:22',
                         message: 'Tutto fatto!',
                         status: 'received'
-                    }
+                    },
+                    {
+                        date: '03/02/2020 14:50:33',
+                        message: 'Ricordati che domani compleanno di Lucia?',
+                        status: 'received'
+                    },
+                    {
+                        date: '03/02/2020 15:05:33',
+                        message: 'Domani faccio gli auguri',
+                        status: 'received'
+                    },
+                    {
+                        date: '04/02/2020 8:50:33',
+                        message: 'Li ho dato un regalo e un biglietto di buon compleanno',
+                        status: 'received'
+                    },
                 ],
             },
             
@@ -382,8 +397,24 @@ var app = new Vue({
 
         // richiamo la funzione moment
         moment: function (stringa) {
-            // console.log(stringa);
-            let check = moment(stringa).format('H:mm:ss [il] D/MM');
+            console.log(moment().date());
+            console.log(moment().date(String));
+
+            let check = undefined;
+
+            if( moment().date() == moment(stringa).date() ){
+                check = moment(stringa).format('[oggi ]H:mm:ss');
+            
+            } else if( moment().date() - 1 == moment(stringa).date() ){
+                check = moment(stringa).format('[ieri ]H:mm');
+            
+            }  else if( moment().date() - 2 == moment(stringa).date() ){
+                check = moment(stringa).format('[l\'altroieri ]H:mm');
+            
+            } else {
+                check = moment(stringa).format('[data ]D/MM/YY');
+            }
+
             return check;
         },
 
