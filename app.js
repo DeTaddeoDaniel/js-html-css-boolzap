@@ -283,9 +283,11 @@ var app = new Vue({
 
         // search
         search: '',
+        cercaMessagioArray:[],
 
         // input text
         textInputChatMessage: '',
+        filterMessagiInput: '',
 
         // schermate
         openProfiloBooleano: false,
@@ -306,6 +308,7 @@ var app = new Vue({
                 // console.log(messaggio.date)
             } );
         });
+
     },
 
     methods:{
@@ -313,7 +316,10 @@ var app = new Vue({
             console.log(index);
             this.chatIndex = index;
             this.chatAttiva = this.contatti[index].messages;
-            console.log(this.chatAttiva)
+            
+            console.log(this.chatAttiva);
+            this.filterMessagiInput = '';
+            this.filterMessagi();
         },
 
         // filtra contatti
@@ -378,7 +384,6 @@ var app = new Vue({
         moment: function (stringa) {
             // console.log(stringa);
             let check = moment(stringa).format('H:mm:ss [il] D/MM');
-            // console.log(check);
             return check;
         },
 
@@ -400,7 +405,7 @@ var app = new Vue({
             let menuTendina = message.children[1];
 
             menuTendina.classList.remove('show');
-        
+                    this.filterMessagi()
         },
 
         // cancella messaggio
@@ -442,7 +447,43 @@ var app = new Vue({
 
             document.getElementById('inputUserInput').disabled = true;
             document.getElementById('inputInfoInput').disabled = true;
-        }
+        },
+
+        // filtra messagi
+        filterMessagi: function () {
+
+            this.cercaMessagioArray=[]
+
+            if(this.filterMessagiInput != ''){
+
+                // filtro è attivo
+                this.chatAttiva.forEach((sms, index) => {
+
+                    // tutto in minuscolo testo
+                    let messaggio = sms.message.toLowerCase();
+                    let inputSearch = this.filterMessagiInput.toLowerCase();
+
+                    // nome contiene stringa search
+                    if(messaggio.includes(inputSearch)){
+                        
+                        let msEdit = messaggio.replace(inputSearch, `<span class="text-blue">${inputSearch}</span>`)
+                        
+                        let ms ={
+                            date: sms.date,
+                            message: msEdit,
+                            status: sms.status
+                        }
+                        console.log(ms)
+                        this.cercaMessagioArray.push(ms);
+                    }
+                });
+
+            } else {
+                // svuota array per difetto
+                this.cercaMessagioArray=[];
+            }
+
+        },
 
 
     }

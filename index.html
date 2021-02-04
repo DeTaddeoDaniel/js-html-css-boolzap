@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/notificheStyle.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/finestraProfilo.css">
+    <link rel="stylesheet" href="css/messaggiFiltrati.css">
 
 </head>
 <body>
@@ -211,6 +212,50 @@
                 </div>
 
             </div>
+
+            <!-- search message -->
+            <!-- ********************************************************* -->
+            <div class="messageFiltatiAll">
+                <div class="header headerMessaggiFiltrati">
+
+                    <div class="profilo" >
+                        <span><i class="fas fa-arrow-left"></i></span>
+                    </div>
+                    
+                    <span class="profiloAction">
+                        <span>Messaggi cercati</span>
+                    </span>
+
+                </div>
+
+                <div class="search">
+                    <div class="search-content">
+                        <i class="fas fa-search">
+                            <input type="text" placeholder="cerca o inizia una nuova conversazione" v-model='filterMessagiInput' @input='filterMessagi'>
+                        </i>
+                    </div>
+                </div>
+
+                <div 
+                    v-if="(cercaMessagioArray.length != 0)"
+                    class="divMessageFilter" 
+                    v-for="(messaggio,index) in cercaMessagioArray">
+
+                    <p class="infoOrarioFiltrato">
+                        {{moment(messaggio.date)}}
+                    </p>
+
+                    <p>
+                        <span  v-html="messaggio.message"></span>
+                    </p>
+                            
+                </div>
+
+                <p class="divMessageFilter" v-if="(cercaMessagioArray.length == 0)"> Non ci sono risultati</p>
+
+            </div>
+            <!-- ********************************************************** -->
+
 
         </div>
     </div>

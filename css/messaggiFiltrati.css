@@ -1,0 +1,33 @@
+.messageFiltatiAll{
+    background-color: white;
+    /* width: 400px; */
+}
+
+.headerMessaggiFiltrati{
+    padding: 10px;
+    border-left: 1px solid #aaa;
+}
+
+.headerMessaggiFiltrati span{
+    padding: 15px;
+    color: black;
+}
+
+.divMessageFilter{
+    border-bottom: 1px solid #ccc;
+    padding: 20px 10px;
+}
+
+.divMessageFilter p{
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.divMessageFilter .infoOrarioFiltrato{
+    color: #555;
+}
+
+.text-blue{
+    color: rgb(4, 19, 160);
+    font-weight: bold;
+}
