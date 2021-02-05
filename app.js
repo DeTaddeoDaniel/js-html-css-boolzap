@@ -351,6 +351,25 @@ var app = new Vue({
             } );
         });
 
+        // nomi dinamici contatti
+        this.contatti.forEach( (contatto,index) =>{
+            
+            console.log("- "+ index + " : " + contatto);
+            
+            axios
+                .get('https://flynn.boolean.careers/exercises/api/random/name')
+                .then(function (response) {
+                    const result = response.data.response;
+                    contatto.name = result;
+                })
+                .catch(function(error){
+                    console.log("errore: "+error);
+                })
+        });
+
+
+        
+
     },
 
     methods:{
