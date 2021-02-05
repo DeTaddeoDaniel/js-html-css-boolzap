@@ -9,6 +9,8 @@
 
 .left{
     width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .right{

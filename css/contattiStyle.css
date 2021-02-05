@@ -1,7 +1,9 @@
 .contatti{
     overflow-y: scroll;
     background-color: #ccc;
-    height: calc(100vh - 140px - 60px);
+    /* min-height: calc(100vh - 140px - 60px); */
+    max-height: 100%;
+    flex-grow: 1;
 }
 
 .contatto{
