@@ -42,17 +42,17 @@ var app = new Vue({
                         status: 'sent'
                     },
                     {
-                        date: '11/01/2020 7:50:00',
+                        date: '31/01/2020 7:50:00',
                         message: 'Ricordati di dargli da mangiare',
                         status: 'sent'
                     },
                     {
-                        date: '11/01/2020 8:15:22',
+                        date: '01/02/2020 8:15:22',
                         message: 'Tutto fatto!',
                         status: 'received'
                     },
                     {
-                        date: '03/02/2020 14:50:33',
+                        date: '02/02/2020 14:50:33',
                         message: 'Ricordati che domani compleanno di Lucia?',
                         status: 'received'
                     },
@@ -431,13 +431,25 @@ var app = new Vue({
             if( moment().date() == moment(stringa).date() ){
                 check = moment(stringa).format('[oggi ]H:mm:ss');
             
-            // ieri
+            // giorno -1
             } else if( moment().date() - 1 == moment(stringa).date() ){
                 check = moment(stringa).format('[ieri ]H:mm');
             
-            // l'altro ieri
+            // giorno -2
             }  else if( moment().date() - 2 == moment(stringa).date() ){
                 check = moment(stringa).format('[l\'altroieri ]H:mm');
+
+             // giorno -3
+            }  else if( moment().date() - 3 == moment(stringa).date() ){
+                check = moment(stringa).format('dddd H:mm');
+            
+            // giorno -4
+            }  else if( moment().date() - 4 == moment(stringa).date() ){
+                check = moment(stringa).format('dddd H:mm');
+            
+            // giorno-5
+            }  else if( moment().date() - 5 == moment(stringa).date() ){
+                check = moment(stringa).format('dddd H:mm');
             
             // passato
             } else {
