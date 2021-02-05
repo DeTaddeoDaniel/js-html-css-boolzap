@@ -55,7 +55,7 @@
                     <!-- action profile -->
                     <div class="profiloAction">
                         <div class="action stato">
-                            <i class="fas fa-circle-notch" @click="openProfilo"></i>
+                            <i class="fas fa-circle-notch iconActiveJS" @click="openProfilo"></i>
                         </div>        
                         <div class="action NewChat">
                             <i class="fas fa-comment-alt"></i>
@@ -213,7 +213,7 @@
                         <input type="text"  v-model="textInputChatMessage" @keyup.enter='addElementChat' placeholder="Inserisci testo da inviare">
                     </div>
                     <div class="iconInput">
-                        <i class="fas fa-microphone" @click="playAudio"></i>
+                        <i class="fas fa-microphone iconActiveJS" @click="playAudio"></i>
                     </div>
                 </div>
 
@@ -237,27 +237,32 @@
                 <div class="search">
                     <div class="search-content">
                         <i class="fas fa-search">
-                            <input type="text" placeholder="cerca o inizia una nuova conversazione" v-model='filterMessagiInput' @input='filterMessagi'>
+                            <input type="text" placeholder="cerca un messaggio" v-model='filterMessagiInput' @input='filterMessagi'>
                         </i>
                     </div>
                 </div>
 
-                <div 
-                    v-if="(cercaMessagioArray.length != 0)"
-                    class="divMessageFilter" 
-                    v-for="(messaggio,index) in cercaMessagioArray">
+                <div class="areaScroll">
 
-                    <p class="infoOrarioFiltrato">
-                        {{moment(messaggio.date)}}
-                    </p>
+                    <div 
+                        v-if="(cercaMessagioArray.length != 0)"
+                        class="divMessageFilter" 
+                        v-for="(messaggio,index) in cercaMessagioArray">
 
-                    <p>
-                        <span  v-html="messaggio.message"></span>
-                    </p>
-                            
+                        <p class="infoOrarioFiltrato">
+                            {{moment(messaggio.date)}}
+                        </p>
+
+                        <p>
+                            <span  v-html="messaggio.message"></span>
+                        </p>
+                                
+                    </div>
+
+                    <p class="divMessageFilter" v-if="(cercaMessagioArray.length == 0)"> Non ci sono risultati</p>
+                    
                 </div>
 
-                <p class="divMessageFilter" v-if="(cercaMessagioArray.length == 0)"> Non ci sono risultati</p>
 
             </div>
             <!-- ********************************************************** -->

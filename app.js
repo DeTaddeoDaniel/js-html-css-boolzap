@@ -366,7 +366,8 @@ var app = new Vue({
                     contatto.name = result;
                 })
                 .catch(function(error){
-                    console.log("errore: "+error);
+                    console.log("error API: "+error);
+                    console.log("caricamento dati predifiniti")
                 })
         });
 

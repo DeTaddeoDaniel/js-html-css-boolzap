@@ -1,11 +1,17 @@
 .messageFiltatiAll{
     background-color: white;
+    display: flex;
+    flex-direction: column;
     /* width: 400px; */
 }
 
 .headerMessaggiFiltrati{
     padding: 10px;
     border-left: 1px solid #aaa;
+}
+
+.areaScroll{
+    overflow-y: auto;
 }
 
 .headerMessaggiFiltrati span{
