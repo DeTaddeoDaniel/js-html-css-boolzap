@@ -334,6 +334,9 @@ var app = new Vue({
         // schermate
         openProfiloBooleano: false,
         editInput: false,
+
+        // contatto scrive
+        writeContatto: false,
     },
 
     // attiva la chat al posto 0 del primo contatto
@@ -366,9 +369,6 @@ var app = new Vue({
                     console.log("errore: "+error);
                 })
         });
-
-
-        
 
     },
 
@@ -425,7 +425,11 @@ var app = new Vue({
                 this.contatti[this.chatIndex].messages.push(message)
                 this.textInputChatMessage =''
 
-                setTimeout(this.addAnswer, 3000)
+                setTimeout( () => {
+                    this.writeContatto = true;
+                }, 1500)
+
+                setTimeout(this.addAnswer, 5000)
 
             }
         },
@@ -438,7 +442,8 @@ var app = new Vue({
                 status: 'sent'
             }
 
-            this.contatti[this.chatIndex].messages.push(message)
+            this.contatti[this.chatIndex].messages.push(message);
+            this.writeContatto = false;
         },
 
         // richiamo la funzione moment

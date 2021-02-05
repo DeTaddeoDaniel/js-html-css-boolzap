@@ -154,7 +154,10 @@
                         <div class="ImgConteiner">
                             <img :src="'img/avatar'+contatti[chatIndex].avatar+'.jpg'" alt="OtherPeople">
                         </div>
-                        <p class="nameUser">{{contatti[chatIndex].name}}</p>
+                        <div class="p-relative">
+                            <p class="nameUser">{{contatti[chatIndex].name}}</p>
+                            <p v-if="writeContatto" class="statoScrittura">{{contatti[chatIndex].name}} writing</p>
+                        </div>
                     </div>
                     
                     <!-- action profile -->

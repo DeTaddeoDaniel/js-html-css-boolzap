@@ -93,3 +93,14 @@
 .testoAvviso{
     padding: 10px 20px;
 }
+
+.p-relative{
+    position: relative;
+}
+
+.statoScrittura{
+    left: 5px;
+    position: absolute;
+    color: #aaa;
+    font-size: 10px;
+}
