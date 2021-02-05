@@ -8,6 +8,7 @@
 .headerMessaggiFiltrati{
     padding: 10px;
     border-left: 1px solid #aaa;
+    justify-content: center;
 }
 
 .areaScroll{
@@ -15,8 +16,9 @@
 }
 
 .headerMessaggiFiltrati span{
-    padding: 15px;
+    padding: 5px;
     color: black;
+    font-weight: bold;
 }
 
 .divMessageFilter{
